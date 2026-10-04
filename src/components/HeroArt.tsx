@@ -31,7 +31,7 @@ export function HeroArt({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 320 360"
-      className={className}
+      className={`block ${className ?? ""}`}
       role="img"
       aria-label="Illustration of support tickets and customer feedback flowing into a tool and coming out resolved"
     >
