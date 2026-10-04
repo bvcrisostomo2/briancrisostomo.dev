@@ -25,7 +25,7 @@ export default function Home() {
             <SocialLinks />
           </div>
         </div>
-        <HeroArt className="hidden w-full lg:block" />
+        <HeroArt className="mx-auto w-full max-w-[220px] lg:max-w-none" />
       </section>
 
       <section className="pb-20">
