@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ExperienceList } from "@/components/ExperienceList";
+import { HeroArt } from "@/components/HeroArt";
 import { ArrowRightIcon } from "@/components/icons";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -10,18 +11,21 @@ import { profile } from "@/data/profile";
 export default function Home() {
   return (
     <>
-      <section className="pb-20 pt-16 sm:pt-24">
-        <p className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-xs text-muted">
-          <span className="size-2 rounded-full bg-accent" aria-hidden />
-          {profile.role} @ {profile.currentCompany}
-        </p>
-        <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          {profile.headline}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
-        <div className="mt-8">
-          <SocialLinks />
+      <section className="grid items-center gap-10 pb-20 pt-16 sm:pt-24 lg:grid-cols-[1fr_320px]">
+        <div>
+          <p className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-xs text-muted">
+            <span className="size-2 rounded-full bg-accent" aria-hidden />
+            {profile.role} @ {profile.currentCompany}
+          </p>
+          <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            {profile.headline}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
+          <div className="mt-8">
+            <SocialLinks />
+          </div>
         </div>
+        <HeroArt className="hidden w-full lg:block" />
       </section>
 
       <section className="pb-20">
