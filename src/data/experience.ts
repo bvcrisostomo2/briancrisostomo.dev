@@ -22,18 +22,18 @@ export const experience: Experience[] = [
     url: "https://www.gladly.com",
     roles: [
       {
-        title: "Customer Success Engineer, Support",
+        title: "Customer Success Engineer",
         start: "Sep 2026",
         end: "Present",
         summary:
-          "Scoping, building, deploying and training on tooling and automation that helps the support engineering team run more efficiently: internal tools for support managers and engineers, ticket automation, and fixes to Gladly products that reduce support tickets. Partnering with Product Engineering on fixes, architecture and API improvements.",
+          "Scoping, building, deploying and training on tooling and automation that helps the Support Engineering team run more efficiently: internal tools for support managers and engineers, ticket automation, and fixes to Gladly products to help find customer tooling gaps that reduce support tickets. Partnering with Product Engineering on fixes, architecture and API improvements.",
       },
       {
         title: "Developer Support Engineer",
         start: "Sep 2025",
         end: "Sep 2026",
         summary:
-          "Helped customer developers integrate and troubleshoot APIs, SDKs and technical products, acting as the bridge between customers' engineering teams and the internal product and engineering org.",
+          "Guided customer developers through API, SDK and product integrations, serving as their bridge to Gladly's Product Engineering org.",
       },
       {
         title: "L2 Technical Support Engineer",
