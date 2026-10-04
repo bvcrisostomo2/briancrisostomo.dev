@@ -71,3 +71,33 @@ body {
   outline: 2px solid var(--fg);
   outline-offset: 2px;
 }
+
+/* Hero illustration motion */
+.hero-flow {
+  stroke-dasharray: 4 6;
+  animation: hero-flow 1.4s linear infinite;
+}
+.hero-gear {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-spin 10s linear infinite;
+}
+.hero-cursor {
+  animation: hero-blink 1.1s steps(2, start) infinite;
+}
+@keyframes hero-flow {
+  to { stroke-dashoffset: -20; }
+}
+@keyframes hero-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes hero-blink {
+  to { visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-flow,
+  .hero-gear,
+  .hero-cursor {
+    animation: none;
+  }
+}
