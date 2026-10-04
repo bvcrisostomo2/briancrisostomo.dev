@@ -59,15 +59,17 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: "Concentrix",
-    logo: { text: "C", color: "#00395d" },
+    company: "Westpac",
+    via: "Concentrix",
+    logo: { text: "W", color: "#da1710" },
+    url: "https://www.westpac.com.au",
     roles: [
       {
         title: "Home Loan Advisor",
         start: "Jan 2020",
         end: "Jan 2022",
         summary:
-          "Handled and processed home loans for Australian banks using internal and external tools like Salesforce and Zendesk.",
+          "Handled and processed Westpac home loans for Australian customers using internal and external tools like Salesforce and Zendesk.",
       },
     ],
   },
