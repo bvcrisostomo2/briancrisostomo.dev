@@ -89,6 +89,7 @@ export const experience: Experience[] = [
   {
     company: "UnionBank of the Philippines",
     logo: { text: "U", color: "#f58220" },
+    url: "https://www.unionbankph.com",
     roles: [
       {
         title: "Intern",
