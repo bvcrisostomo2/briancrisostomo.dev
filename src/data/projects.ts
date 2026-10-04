@@ -6,7 +6,7 @@ export type Project = {
   tech: string[];
   links: { demo?: string; source?: string };
   featured?: boolean;
-  /** Placeholder project — shows a "Sample" badge until replaced. */
+  /** Placeholder project: shows a "Sample" badge until replaced. */
   sample?: boolean;
 };
 
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     glyph: "4xx",
     tagline: "Paste an HTTP error, get likely causes and fixes.",
     description:
-      "A web tool that turns raw API responses into plain-language explanations with a checklist of the usual suspects — auth, rate limits, payload shape.",
+      "A web tool that turns raw API responses into plain-language explanations with a checklist of the usual suspects: auth, rate limits and payload shape.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     links: { demo: "#", source: "#" },
     featured: true,
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     glyph: "U:",
     tagline: "HR chatbot foundation built at UnionBank.",
     description:
-      "Built the foundation of U:bot during my internship at UnionBank of the Philippines — a chatbot used by the HR departments to answer employee questions.",
+      "Built the foundation of U:bot during my internship at UnionBank of the Philippines: a chatbot used by the HR departments to answer employee questions.",
     tech: ["JavaScript", "Chatbot"],
     links: {},
   },

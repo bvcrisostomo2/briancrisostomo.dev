@@ -15,6 +15,6 @@ export const education = [
   {
     school: "University of Santo Tomas",
     degree: "BS Computer Science, major in Data Science",
-    years: "2014 – 2018",
+    years: "2014 - 2018",
   },
 ];

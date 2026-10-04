@@ -20,7 +20,7 @@ function save(key: string, value: string) {
   try {
     localStorage.setItem(key, value);
   } catch {
-    // Storage blocked (private mode etc.) — the choice just won't persist.
+    // Storage blocked (private mode etc.), so the choice just won't persist.
   }
 }
 

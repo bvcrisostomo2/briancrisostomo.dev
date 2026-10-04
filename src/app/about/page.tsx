@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="grid gap-10 pb-20 pt-16 sm:pt-24 md:grid-cols-[1fr_260px] md:items-start">
         <div>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            I&apos;m {profile.shortName}. I help developers get unstuck.
+            I&apos;m {profile.shortName}. I build tools that help support teams move faster.
           </h1>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
             {profile.bio.map((paragraph) => (
@@ -41,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       <section className="pb-20">
-        <SectionHeading title="My journey" description="How I got from a CS classroom to developer support." />
+        <SectionHeading title="My journey" description="How I got from a CS classroom to building support tooling." />
         <div className="max-w-2xl">
           <Timeline />
         </div>
