@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Timeline } from "@/components/Timeline";
 import { profile } from "@/data/profile";
+import { assetPath } from "@/lib/assetPath";
 import { education, skills } from "@/data/skills";
 
 export const metadata: Metadata = {
@@ -27,15 +28,15 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* TODO: swap for a real photo in /public and an <img>. */}
         <div className="order-first md:order-none">
-          <div
-            className="grid aspect-square w-40 place-items-center rounded-3xl border border-border bg-card font-mono text-5xl font-bold text-accent md:w-full"
-            role="img"
-            aria-label={`${profile.name} (photo placeholder)`}
-          >
-            {profile.initials}
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
+          <img
+            src={assetPath(profile.photo)}
+            alt={profile.name}
+            width={512}
+            height={512}
+            className="aspect-square w-40 rounded-3xl border border-border object-cover md:w-full"
+          />
           <p className="mt-3 text-sm text-muted">{profile.location}</p>
         </div>
       </section>

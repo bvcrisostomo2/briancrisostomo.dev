@@ -8,6 +8,7 @@ export const profile = {
   name: "Brian Paul Crisostomo",
   shortName: "Brian",
   initials: "BC",
+  photo: "/images/brian.webp",
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
   location: "Metro Manila, Philippines",
