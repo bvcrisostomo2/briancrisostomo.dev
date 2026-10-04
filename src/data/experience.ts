@@ -84,6 +84,7 @@ export const experience: Experience[] = [
   {
     company: "Red Tomato Design Studio",
     logo: { text: "R", color: "#d64545", src: "/logos/redtomato.svg" },
+    url: "https://www.linkedin.com/company/redtomato-design-studio/",
     roles: [
       {
         title: "Software Engineer",
