@@ -25,7 +25,7 @@
   color-scheme: light;
 }
 
-/* Accent colours — brighter on dark, deeper on light for contrast. */
+/* Accent colours: brighter on dark, deeper on light for contrast. */
 :root,
 [data-accent="green"] { --accent: #4ade80; }
 [data-accent="blue"] { --accent: #60a5fa; }

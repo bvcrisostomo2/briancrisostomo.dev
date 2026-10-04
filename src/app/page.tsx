@@ -27,7 +27,7 @@ export default function Home() {
       <section className="pb-20">
         <SectionHeading
           title="Work Experience"
-          description="From enterprise support to developer support — working where customers' code meets the product."
+          description="From enterprise support to building tools for support teams, always working where customers' code meets the product."
         />
         <ExperienceList />
       </section>

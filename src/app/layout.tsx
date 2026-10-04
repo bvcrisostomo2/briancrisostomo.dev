@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${profile.name} — ${profile.role}`,
+    default: `${profile.name} | ${profile.role}`,
     template: `%s · ${profile.name}`,
   },
   description: profile.intro,

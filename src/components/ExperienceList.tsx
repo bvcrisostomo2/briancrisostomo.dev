@@ -47,7 +47,7 @@ export function ExperienceList() {
                 />
                 <p className="font-medium">{role.title}</p>
                 <p className="font-mono text-xs text-muted">
-                  {role.start} — {role.end}
+                  {role.start} - {role.end}
                 </p>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted">{role.summary}</p>
               </li>
