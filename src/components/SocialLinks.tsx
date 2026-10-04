@@ -1,21 +1,35 @@
 import { profile } from "@/data/profile";
+import { CopyButton } from "./CopyButton";
 import { socialIcons } from "./icons";
+
+const itemClass =
+  "flex cursor-pointer items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-fg";
 
 export function SocialLinks() {
   return (
     <ul className="flex flex-wrap gap-2">
-      {profile.socials.map(({ label, href, icon }) => {
-        const Icon = socialIcons[icon];
-        const external = href.startsWith("http");
+      {profile.socials.map((social) => {
+        const Icon = socialIcons[social.icon];
+        const icon = <Icon width={16} height={16} />;
+
+        if (social.copy !== undefined) {
+          return (
+            <li key={social.label}>
+              <CopyButton text={social.copy} label={social.label} icon={icon} className={itemClass} />
+            </li>
+          );
+        }
+
+        const external = social.href.startsWith("http");
         return (
-          <li key={label}>
+          <li key={social.label}>
             <a
-              href={href}
+              href={social.href}
               {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-              className="flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-fg"
+              className={itemClass}
             >
-              <Icon width={16} height={16} />
-              {label}
+              {icon}
+              {social.label}
             </a>
           </li>
         );

@@ -1,8 +1,8 @@
+/** A link opens `href`; a copy button puts `copy` on the clipboard instead. */
 export type SocialLink = {
   label: string;
-  href: string;
   icon: "github" | "linkedin" | "mail";
-};
+} & ({ href: string; copy?: never } | { copy: string; href?: never });
 
 export const profile = {
   name: "Brian Paul Crisostomo",
@@ -20,10 +20,9 @@ export const profile = {
     "Before that I was a Developer Support Engineer at Gladly, helping customer developers get their integrations working, and a Technical Team Lead on the Airtable enterprise account.",
     "I like building small tools that make support faster and writing things down so the next person doesn't have to rediscover them. Away from the keyboard, I shoot and edit photos in Lightroom.",
   ],
-  // TODO: replace with your personal accounts before publishing.
   socials: [
-    { label: "GitHub", href: "https://github.com/your-username", icon: "github" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle", icon: "linkedin" },
-    { label: "Email", href: "mailto:bvcrisostomo2@gmail.com", icon: "mail" },
-  ] satisfies SocialLink[],
+    { label: "GitHub", href: "https://github.com/bvcrisostomo2", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/brian-crisostomo-653144185/", icon: "linkedin" },
+    { label: "Email", copy: "bvcrisostomo2@gmail.com", icon: "mail" },
+  ] satisfies SocialLink[] as SocialLink[],
 };
