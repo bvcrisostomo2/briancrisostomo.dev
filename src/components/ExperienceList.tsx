@@ -1,4 +1,5 @@
 import { experience } from "@/data/experience";
+import { assetPath } from "@/lib/assetPath";
 
 export function ExperienceList() {
   return (
@@ -9,13 +10,20 @@ export function ExperienceList() {
           className="rounded-2xl border border-border bg-card p-5 transition-colors hover:bg-card-hover"
         >
           <header className="flex items-center gap-3">
-            <span
-              className="grid size-11 shrink-0 place-items-center rounded-xl text-lg font-bold text-white"
-              style={{ background: job.logo.color }}
-              aria-hidden
-            >
-              {job.logo.text}
-            </span>
+            {job.logo.src ? (
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl border border-border bg-white p-1.5">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
+                <img src={assetPath(job.logo.src)} alt="" className="size-full object-contain" />
+              </span>
+            ) : (
+              <span
+                className="grid size-11 shrink-0 place-items-center rounded-xl text-lg font-bold text-white"
+                style={{ background: job.logo.color }}
+                aria-hidden
+              >
+                {job.logo.text}
+              </span>
+            )}
             <div className="min-w-0">
               <h3 className="font-semibold">
                 {job.url ? (

@@ -8,7 +8,8 @@ export type Role = {
 export type Experience = {
   company: string;
   via?: string;
-  logo: { text: string; color: string };
+  /** `src` is a path under /public; `text` + `color` is the fallback badge. */
+  logo: { text: string; color: string; src?: string };
   url?: string;
   roles: Role[]; // newest first
 };
@@ -17,7 +18,7 @@ export const experience: Experience[] = [
   {
     company: "Gladly",
     via: "Support Ninja Inc.",
-    logo: { text: "G", color: "#1f6f5c" },
+    logo: { text: "G", color: "#1f6f5c", src: "/logos/gladly.svg" },
     url: "https://www.gladly.com",
     roles: [
       {
@@ -39,7 +40,7 @@ export const experience: Experience[] = [
   {
     company: "Airtable",
     via: "PartnerHero",
-    logo: { text: "A", color: "#2d7ff9" },
+    logo: { text: "A", color: "#2d7ff9", src: "/logos/airtable.svg" },
     url: "https://www.airtable.com",
     roles: [
       {
@@ -61,7 +62,7 @@ export const experience: Experience[] = [
   {
     company: "Westpac",
     via: "Concentrix",
-    logo: { text: "W", color: "#da1710" },
+    logo: { text: "W", color: "#da1710", src: "/logos/westpac.svg" },
     url: "https://www.westpac.com.au",
     roles: [
       {
@@ -75,7 +76,7 @@ export const experience: Experience[] = [
   },
   {
     company: "Red Tomato Design Studio",
-    logo: { text: "R", color: "#d64545" },
+    logo: { text: "R", color: "#d64545", src: "/logos/redtomato.svg" },
     roles: [
       {
         title: "Software Engineer",
@@ -88,7 +89,7 @@ export const experience: Experience[] = [
   },
   {
     company: "UnionBank of the Philippines",
-    logo: { text: "U", color: "#f58220" },
+    logo: { text: "U", color: "#f58220", src: "/logos/unionbank.svg" },
     url: "https://www.unionbankph.com",
     roles: [
       {
