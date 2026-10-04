@@ -26,7 +26,7 @@ export const experience: Experience[] = [
         start: "Sep 2026",
         end: "Present",
         summary:
-          "Scoping, building, deploying and training on tooling and automation that helps the Support Engineering team run more efficiently: internal tools for support managers and engineers, ticket automation, and fixes to Gladly products to help find customer tooling gaps that reduce support tickets. Partnering with Product Engineering on fixes, architecture and API improvements.",
+          "Building tooling and automation that helps the Support Engineering team run more efficiently, from internal tools to product fixes that close customer tooling gaps and reduce support tickets.",
       },
       {
         title: "Developer Support Engineer",
