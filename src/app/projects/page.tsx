@@ -11,8 +11,8 @@ export default function ProjectsPage() {
     <section className="pt-16 sm:pt-24">
       <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Projects</h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-        Tools, experiments and side projects, mostly built to make troubleshooting integrations a
-        little less painful.
+        Projects I&apos;ve made over the years, including a weather app, my first portfolio, and an HR
+        chatbot I built as an intern.
       </p>
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
