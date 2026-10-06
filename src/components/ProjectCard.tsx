@@ -35,12 +35,22 @@ export function ProjectCard({ project }: { project: Project }) {
       {(links.demo || links.source) && (
         <div className="mt-5 flex gap-4 text-sm">
           {links.demo && (
-            <a href={links.demo} className="flex items-center gap-1 text-fg hover:text-accent">
+            <a
+              href={links.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 text-fg hover:text-accent"
+            >
               Live demo <ArrowUpRightIcon width={14} height={14} />
             </a>
           )}
           {links.source && (
-            <a href={links.source} className="flex items-center gap-1 text-fg hover:text-accent">
+            <a
+              href={links.source}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 text-fg hover:text-accent"
+            >
               Source <ArrowUpRightIcon width={14} height={14} />
             </a>
           )}
