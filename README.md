@@ -19,7 +19,7 @@ Everything on the site comes from `src/data/`:
 | --- | --- |
 | `profile.ts` | Name, headline, intro, bio, social links |
 | `experience.ts` | Companies and roles (newest first) |
-| `projects.ts` | Project cards — `sample: true` shows a "Sample" badge |
+| `projects.ts` | Project cards — `year` shows a badge with the year it was built |
 | `timeline.ts` | "My journey" entries on the About page |
 | `skills.ts` | Skill groups and education |
 
@@ -31,3 +31,10 @@ Everything on the site comes from `src/data/`:
    **Source** to **GitHub Actions**.
 3. Push to `main`. `.github/workflows/deploy.yml` builds and deploys; the
    correct base path is filled in automatically.
+
+## Credits
+
+The design is inspired by:
+
+- [victoreke.com](https://victoreke.com/) by Victor Eke ([source](https://github.com/Evavic44/victoreke.com)) — overall layout
+- [taniarascia.com](https://www.taniarascia.com/blog/) by Tania Rascia ([source](https://github.com/taniarascia/taniarascia.com)) — journey timeline and accent-colour picker

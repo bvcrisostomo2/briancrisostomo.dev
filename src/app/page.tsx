@@ -39,7 +39,7 @@ export default function Home() {
       <section>
         <SectionHeading
           title="Featured Projects"
-          description="Things I've built to make debugging and support faster."
+          description="A few things I've built, tagged with the year I made them."
           action={
             <Link
               href="/projects/"

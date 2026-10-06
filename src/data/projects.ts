@@ -6,53 +6,38 @@ export type Project = {
   tech: string[];
   links: { demo?: string; source?: string };
   featured?: boolean;
-  /** Placeholder project: shows a "Sample" badge until replaced. */
-  sample?: boolean;
+  /** Year the project was built, shown as a badge on the card. */
+  year?: string;
 };
 
 export const projects: Project[] = [
   {
-    name: "Webhook Inspector",
-    glyph: "{ }",
-    tagline: "Capture, replay and diff webhook payloads.",
+    name: "React Weather App",
+    glyph: "°C",
+    tagline: "Current weather for any city, from the OpenWeather API.",
     description:
-      "A small CLI for debugging integrations: records incoming webhooks, replays them against a local endpoint and highlights what changed between two deliveries.",
-    tech: ["TypeScript", "Node.js", "CLI"],
-    links: { source: "#" },
+      "Enter a city and country to get the temperature, humidity and conditions. One of my first React apps, built to learn components, state and calling a third-party API.",
+    tech: ["React", "OpenWeather API", "React-MDL"],
+    links: {
+      demo: "https://bvcrisostomo2.github.io/react-weather-app/",
+      source: "https://github.com/bvcrisostomo2/react-weather-app",
+    },
     featured: true,
-    sample: true,
+    year: "2019",
   },
   {
-    name: "API Error Decoder",
-    glyph: "4xx",
-    tagline: "Paste an HTTP error, get likely causes and fixes.",
+    name: "React Portfolio",
+    glyph: "</>",
+    tagline: "My first portfolio site.",
     description:
-      "A web tool that turns raw API responses into plain-language explanations with a checklist of the usual suspects: auth, rate limits and payload shape.",
-    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
-    links: { demo: "#", source: "#" },
+      "A single-page portfolio with resume, projects and contact pages, built with React, React Router and the React-MDL Material Design components.",
+    tech: ["React", "React Router", "React-MDL", "Bootstrap"],
+    links: {
+      demo: "https://bvcrisostomo2.github.io/react-portfolio/",
+      source: "https://github.com/bvcrisostomo2/react-portfolio",
+    },
     featured: true,
-    sample: true,
-  },
-  {
-    name: "Support Runbook MCP",
-    glyph: ">_",
-    tagline: "Expose support runbooks to AI coding agents.",
-    description:
-      "A Model Context Protocol server that lets Claude Code search and follow troubleshooting runbooks, so investigations start from the documented path.",
-    tech: ["TypeScript", "MCP", "Claude Code"],
-    links: { source: "#" },
-    featured: true,
-    sample: true,
-  },
-  {
-    name: "Airtable Script Snippets",
-    glyph: "fx",
-    tagline: "Scripting & automation recipes from enterprise support.",
-    description:
-      "A searchable collection of Airtable scripting extension and automation snippets that came up again and again in enterprise tickets.",
-    tech: ["JavaScript", "Airtable"],
-    links: { source: "#" },
-    sample: true,
+    year: "2019",
   },
   {
     name: "U:bot",
@@ -62,16 +47,8 @@ export const projects: Project[] = [
       "Built the foundation of U:bot during my internship at UnionBank of the Philippines: a chatbot used by the HR departments to answer employee questions.",
     tech: ["JavaScript", "Chatbot"],
     links: {},
-  },
-  {
-    name: "EXIF Sorter",
-    glyph: "f/2",
-    tagline: "Organise photo shoots by camera, lens and date.",
-    description:
-      "A Python script that reads EXIF metadata and files photos into folders before importing them into Lightroom.",
-    tech: ["Python"],
-    links: { source: "#" },
-    sample: true,
+    featured: true,
+    year: "2017",
   },
 ];
 
