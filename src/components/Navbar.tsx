@@ -28,7 +28,7 @@ export function Navbar() {
           <span className="grid size-8 place-items-center rounded-lg bg-accent text-bg">
             {profile.initials}
           </span>
-          <span className="hidden sm:inline">{profile.shortName.toLowerCase()}.dev</span>
+          <span className="hidden sm:inline">{profile.domain}</span>
         </Link>
         <ul className="flex items-center gap-1 text-sm">
           {links.map(({ href, label }) => {
