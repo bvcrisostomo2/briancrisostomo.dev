@@ -7,10 +7,31 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { SocialLinks } from "@/components/SocialLinks";
 import { featuredProjects } from "@/data/projects";
 import { profile } from "@/data/profile";
+import { education } from "@/data/skills";
+
+const siteUrl = `https://${profile.domain}`;
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  url: `${siteUrl}/`,
+  image: `${siteUrl}${profile.photo}`,
+  jobTitle: profile.role,
+  description: profile.intro,
+  worksFor: { "@type": "Organization", name: profile.currentCompany, url: "https://www.gladly.com" },
+  alumniOf: education.map((entry) => ({ "@type": "CollegeOrUniversity", name: entry.school })),
+  address: { "@type": "PostalAddress", addressLocality: "Metro Manila", addressCountry: "PH" },
+  sameAs: profile.socials.flatMap((social) => (social.href ? [social.href] : [])),
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }}
+      />
       <section className="grid items-center gap-10 pb-20 pt-16 sm:pt-24 lg:grid-cols-[1fr_320px]">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-xs text-muted">
