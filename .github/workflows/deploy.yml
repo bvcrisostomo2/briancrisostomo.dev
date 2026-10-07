@@ -26,10 +26,13 @@ jobs:
       - uses: actions/configure-pages@v5
         id: pages
       - run: npm ci
-      # base_path is "" for <user>.github.io and "/<repo>" for project pages.
+      # The site is served from the root of the custom domain (briancrisostomo.dev),
+      # so no base path. configure-pages reports "/<repo>" here, which breaks every
+      # asset URL. If the custom domain is ever removed, switch back to the
+      # configure-pages output: steps.pages.outputs.base_path.
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ""
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
