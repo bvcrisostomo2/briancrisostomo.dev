@@ -8,6 +8,7 @@ export const profile = {
   name: "Brian Paul Crisostomo",
   shortName: "Brian",
   initials: "BC",
+  domain: "briancrisostomo.dev",
   photo: "/images/brian.webp",
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
