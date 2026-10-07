@@ -17,6 +17,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://briancrisostomo.dev"),
+  alternates: { canonical: "./" },
+  openGraph: {
+    type: "website",
+    url: "./",
+    siteName: profile.name,
+  },
   title: {
     default: `${profile.name} | ${profile.role}`,
     template: `%s · ${profile.name}`,
