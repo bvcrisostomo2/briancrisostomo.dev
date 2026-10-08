@@ -12,6 +12,7 @@ export const profile = {
   photo: "/images/brian.webp",
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
+  currentCompanyUrl: "https://www.gladly.com",
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
   intro:

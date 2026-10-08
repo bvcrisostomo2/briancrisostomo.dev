@@ -19,9 +19,9 @@ const personJsonLd = {
   image: `${siteUrl}${profile.photo}`,
   jobTitle: profile.role,
   description: profile.intro,
-  worksFor: { "@type": "Organization", name: profile.currentCompany, url: "https://www.gladly.com" },
+  worksFor: { "@type": "Organization", name: profile.currentCompany, url: profile.currentCompanyUrl },
   alumniOf: education.map((entry) => ({ "@type": "CollegeOrUniversity", name: entry.school })),
-  address: { "@type": "PostalAddress", addressLocality: "Metro Manila", addressCountry: "PH" },
+  homeLocation: { "@type": "Place", name: profile.location },
   sameAs: profile.socials.flatMap((social) => (social.href ? [social.href] : [])),
 };
 
