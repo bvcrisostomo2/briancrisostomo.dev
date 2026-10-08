@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     default: `${profile.name} | ${profile.role}`,
     template: `%s · ${profile.name}`,
   },
-  description: profile.intro,
+  description: profile.metaDescription,
   authors: [{ name: profile.name, url: `https://${profile.domain}/` }],
 };
 

@@ -15,6 +15,9 @@ export const profile = {
   currentCompanyUrl: "https://www.gladly.com",
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
+  /** Short summary for search results and link previews, which cut text off at around 155 characters. */
+  metaDescription:
+    "Customer Success Engineer at Gladly, building tools and automation that help support teams move faster. Computer Science graduate and weekend photographer.",
   intro:
     "I scope, build and ship tooling and automation for Gladly's Support Engineering team, using what I see in the ticket queue and hear from customers to decide what to build next. Computer Science graduate, former Developer Support Engineer and Team Lead, and weekend photographer.",
   bio: [
