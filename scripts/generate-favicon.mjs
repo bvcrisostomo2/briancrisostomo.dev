@@ -7,28 +7,27 @@ import sharp from "sharp";
 const palette = {
   ".": null, // transparent
   k: "#222226", // --bg (dark)
-  m: "#a6a6ae", // --muted (steam)
-  g: "#4ade80", // --accent (mug)
-  G: "#15803d", // light-theme accent (mug outline and handle)
+  m: "#a6a6ae", // --muted (window frame)
+  g: "#4ade80", // --accent (prompt)
 };
 
-// A green coffee mug with a terminal prompt and three lines of steam.
+// A terminal window with a green >_ prompt.
 const grid = `
-.....m..........
-..m..m..m.......
-..m..m..m.......
 ................
-GGGGGGGGGGG.....
-GkkkkkkkkkG.....
-GgggggggggGGGG..
-GgkgggggggGGGGG.
-GggkggggggG..GG.
-GgggkgggggG..GG.
-GggkggggggGGGGG.
-GgkggkkkggGGGG..
-GgggggggggG.....
-.GgggggggG......
-..GGGGGGG.......
+.mmmmmmmmmmmmmm.
+.mkmkmkmmmmmmmm.
+.mmmmmmmmmmmmmm.
+.mkkkkkkkkkkkkm.
+.mkgkkkkkkkkkkm.
+.mkkgkkkkkkkkkm.
+.mkkkgkkkkkkkkm.
+.mkkgkkkkkkkkkm.
+.mkgkkggggkkkkm.
+.mkkkkkkkkkkkkm.
+.mkkkkkkkkkkkkm.
+.mkkkkkkkkkkkkm.
+.mmmmmmmmmmmmmm.
+................
 ................
 `;
 
@@ -79,7 +78,7 @@ const icoImages = await Promise.all(icoSizes.map(async (size) => ({ size, data: 
 await writeFile("src/app/favicon.ico", ico(icoImages));
 await writeFile("src/app/icon.png", await png(512));
 
-// Apple home-screen icons can't be transparent, so put the mug on the site's dark background.
+// Apple home-screen icons can't be transparent, so put the terminal on the site's dark background.
 const appleIcon = await sharp({ create: { width: 180, height: 180, channels: 4, background: palette.k } })
   .composite([{ input: await png(160), left: 10, top: 10 }])
   .png()
