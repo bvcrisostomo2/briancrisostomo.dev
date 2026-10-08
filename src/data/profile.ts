@@ -15,6 +15,11 @@ export const profile = {
   currentCompanyUrl: "https://www.gladly.com",
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
+  /**
+   * Completes "<role> at <company>, ..." in the site description for search results and link
+   * previews (layout.tsx). Keep it lowercase and short: the full description should stay under ~155 characters.
+   */
+  focus: "building tools and automation that help support teams move faster",
   intro:
     "I scope, build and ship tooling and automation for Gladly's Support Engineering team, using what I see in the ticket queue and hear from customers to decide what to build next. Computer Science graduate, former Developer Support Engineer and Team Lead, and weekend photographer.",
   bio: [
