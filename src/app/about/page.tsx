@@ -8,6 +8,7 @@ import { education, skills } from "@/data/skills";
 
 export const metadata: Metadata = {
   title: "About",
+  description: `About ${profile.name}: ${profile.role} at ${profile.currentCompany}, Computer Science graduate from the ${education[0].school}, and former Developer Support Engineer and Team Lead.`,
 };
 
 export default function AboutPage() {
