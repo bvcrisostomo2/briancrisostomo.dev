@@ -23,7 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "./",
     siteName: profile.name,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${profile.name}, ${profile.role}` }],
   },
+  twitter: { card: "summary_large_image" },
   title: {
     default: `${profile.name} | ${profile.role}`,
     template: `%s · ${profile.name}`,

@@ -4,6 +4,8 @@ import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
+  description:
+    "Projects by Brian Paul Crisostomo, from React apps like a crypto price tracker and a weather app to client websites and an HR chatbot built at UnionBank.",
 };
 
 export default function ProjectsPage() {
