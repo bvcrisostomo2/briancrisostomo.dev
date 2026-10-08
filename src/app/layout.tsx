@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     template: `%s · ${profile.name}`,
   },
   description: profile.intro,
+  authors: [{ name: profile.name, url: `https://${profile.domain}/` }],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
