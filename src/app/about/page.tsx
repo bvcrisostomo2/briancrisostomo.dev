@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Timeline } from "@/components/Timeline";
 import { profile } from "@/data/profile";
 import { assetPath } from "@/lib/assetPath";
+import { aboutProfilePage } from "@/lib/structuredData";
 import { education, skills } from "@/data/skills";
 
 export const metadata: Metadata = {
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutProfilePage} />
       <section className="grid gap-10 pb-20 pt-16 sm:pt-24 md:grid-cols-[1fr_260px] md:items-start">
         <div>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
