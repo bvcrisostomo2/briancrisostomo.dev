@@ -8,9 +8,48 @@ export type Project = {
   featured?: boolean;
   /** Year the project was built, shown as a badge on the card. */
   year?: string;
+  /** Still being built: shows a "Work in progress" badge on the card. */
+  wip?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    name: "Bahain ba?",
+    glyph: "≈",
+    tagline: "Philippines flood hazard map.",
+    description:
+      "Check whether a barangay, city or address in the Philippines floods before you move in. A free flood hazard map built on UP NOAH data.",
+    tech: ["Next.js", "Tailwind CSS", "UP NOAH data", "Vercel"],
+    links: { demo: "https://bahainba.com/" },
+    featured: true,
+    year: "2026",
+  },
+  {
+    name: "Kaibigan",
+    glyph: "Ñ",
+    tagline: "A 3D pixel-art story game based on Noli Me Tangere.",
+    description:
+      "Play as Crisostomo Ibarra's friend in a 3D pixel-art story game that follows José Rizal's Noli Me Tangere.",
+    tech: ["JavaScript", "Three.js", "Vite", "Vitest"],
+    links: {
+      demo: "https://bvcrisostomo2.github.io/kaibigan/",
+      source: "https://github.com/bvcrisostomo2/kaibigan",
+    },
+    featured: true,
+    year: "2026",
+    wip: true,
+  },
+  {
+    name: "briancrisostomo.dev",
+    glyph: ">_",
+    tagline: "This site.",
+    description:
+      "My portfolio, built with Next.js and statically exported to GitHub Pages, with generated link previews, structured data and a pixel-art favicon.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "GitHub Pages"],
+    links: { source: "https://github.com/bvcrisostomo2/briancrisostomo.dev" },
+    featured: true,
+    year: "2026",
+  },
   {
     name: "Coins.ph Crypto Prices",
     glyph: "₿",
@@ -22,7 +61,6 @@ export const projects: Project[] = [
       demo: "https://coinsphprices.netlify.app/",
       source: "https://github.com/bvcrisostomo2/react-coinsph-cryptoprices",
     },
-    featured: true,
     year: "2019",
   },
   {
@@ -36,7 +74,6 @@ export const projects: Project[] = [
       demo: "https://bvcrisostomo2.github.io/react-weather-app/",
       source: "https://github.com/bvcrisostomo2/react-weather-app",
     },
-    featured: true,
     year: "2019",
   },
   {
@@ -60,7 +97,6 @@ export const projects: Project[] = [
       "The studio's site, built while I worked at Red Tomato: services, a portfolio of client work, an about page and contact details.",
     tech: ["React"],
     links: { demo: "https://redtomatodesignstudio.netlify.app/" },
-    featured: true,
     year: "2018",
   },
   {
