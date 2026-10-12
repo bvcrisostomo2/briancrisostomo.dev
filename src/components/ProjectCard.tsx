@@ -2,7 +2,7 @@ import type { Project } from "@/data/projects";
 import { ArrowUpRightIcon } from "./icons";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const { name, glyph, tagline, description, tech, links, year } = project;
+  const { name, glyph, tagline, description, tech, links, year, wip } = project;
 
   return (
     <article className="group flex flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-accent/60 hover:bg-card-hover">
@@ -10,11 +10,18 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="grid h-11 min-w-11 place-items-center rounded-xl border border-border px-2 font-mono text-sm font-semibold text-accent">
           {glyph}
         </span>
-        {year && (
-          <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[11px] tracking-wider text-muted">
-            {year}
-          </span>
-        )}
+        <div className="flex flex-wrap justify-end gap-1.5">
+          {wip && (
+            <span className="rounded-full border border-accent/40 px-2 py-0.5 font-mono text-[11px] tracking-wider text-accent">
+              Work in progress
+            </span>
+          )}
+          {year && (
+            <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[11px] tracking-wider text-muted">
+              {year}
+            </span>
+          )}
+        </div>
       </div>
 
       <h3 className="mt-4 text-lg font-semibold">{name}</h3>
@@ -41,7 +48,7 @@ export function ProjectCard({ project }: { project: Project }) {
               rel="noreferrer"
               className="flex items-center gap-1 text-fg hover:text-accent"
             >
-              Live demo <ArrowUpRightIcon width={14} height={14} />
+              Live Site <ArrowUpRightIcon width={14} height={14} />
             </a>
           )}
           {links.source && (
@@ -51,7 +58,7 @@ export function ProjectCard({ project }: { project: Project }) {
               rel="noreferrer"
               className="flex items-center gap-1 text-fg hover:text-accent"
             >
-              Source <ArrowUpRightIcon width={14} height={14} />
+              Source Repo <ArrowUpRightIcon width={14} height={14} />
             </a>
           )}
         </div>
