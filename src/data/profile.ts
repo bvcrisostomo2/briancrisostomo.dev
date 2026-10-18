@@ -13,6 +13,7 @@ export const profile = {
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
   currentCompanyUrl: "https://www.gladly.com",
+  kofi: "https://ko-fi.com/bvcrisostomo",
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
   /**

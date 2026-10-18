@@ -22,7 +22,15 @@ export function Footer() {
           ))}
         </p>
         <p>
-          © {new Date().getFullYear()} {profile.name}
+          <a
+            href={profile.kofi}
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg hover:text-accent"
+          >
+            ☕ Buy me a coffee
+          </a>
+          {" · "}© {new Date().getFullYear()} {profile.name}
         </p>
       </div>
     </footer>
