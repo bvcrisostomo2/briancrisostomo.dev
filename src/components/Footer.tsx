@@ -1,4 +1,4 @@
-import { profile } from "@/data/profile";
+import { kofiUrl, profile } from "@/data/profile";
 
 const builtWith = [
   { name: "Next.js", href: "https://nextjs.org" },
@@ -24,7 +24,7 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}
           {" · "}
-          <a href={profile.kofi} target="_blank" rel="noreferrer" className="text-fg hover:text-accent">
+          <a href={kofiUrl("footer")} target="_blank" rel="noopener" className="text-fg hover:text-accent">
             <span aria-hidden="true">☕</span> Buy me a coffee
           </a>
         </p>

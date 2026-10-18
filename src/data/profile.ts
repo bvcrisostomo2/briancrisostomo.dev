@@ -4,7 +4,13 @@ export type SocialLink = {
   icon: "github" | "linkedin" | "mail" | "kofi";
 } & ({ href: string; copy?: never } | { copy: string; href?: never });
 
-const kofi = "https://ko-fi.com/bvcrisostomo";
+/**
+ * Ko-fi link tagged with the site and where it sits, so the Ko-fi page's Google Analytics can tell the
+ * footer link from the social button.
+ */
+export function kofiUrl(placement: "footer" | "social"): string {
+  return `https://ko-fi.com/bvcrisostomo?utm_source=briancrisostomo.dev&utm_medium=${placement}`;
+}
 
 export const profile = {
   name: "Brian Paul Crisostomo",
@@ -15,7 +21,6 @@ export const profile = {
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
   currentCompanyUrl: "https://www.gladly.com",
-  kofi,
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
   /**
@@ -35,6 +40,6 @@ export const profile = {
     { label: "GitHub", href: "https://github.com/bvcrisostomo2", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/brian-crisostomo-653144185/", icon: "linkedin" },
     { label: "Email", copy: "bvcrisostomo2@gmail.com", icon: "mail" },
-    { label: "Ko-fi", href: kofi, icon: "kofi" },
+    { label: "Ko-fi", href: kofiUrl("social"), icon: "kofi" },
   ] satisfies SocialLink[] as SocialLink[],
 };
