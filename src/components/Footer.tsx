@@ -25,7 +25,7 @@ export function Footer() {
           © {new Date().getFullYear()} {profile.name}
           {" · "}
           <a href={profile.kofi} target="_blank" rel="noreferrer" className="text-fg hover:text-accent">
-            ☕ Buy me a coffee
+            <span aria-hidden="true">☕</span> Buy me a coffee
           </a>
         </p>
       </div>
