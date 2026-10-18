@@ -1,5 +1,4 @@
 import { profile } from "@/data/profile";
-import { KofiIcon } from "./icons";
 
 const builtWith = [
   { name: "Next.js", href: "https://nextjs.org" },
@@ -23,16 +22,11 @@ export function Footer() {
           ))}
         </p>
         <p>
-          <a
-            href={profile.kofi}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-fg hover:text-accent"
-          >
-            <KofiIcon width={16} height={16} />
-            Buy me a coffee
+          © {new Date().getFullYear()} {profile.name}
+          {" · "}
+          <a href={profile.kofi} target="_blank" rel="noreferrer" className="text-fg hover:text-accent">
+            ☕ Buy me a coffee
           </a>
-          {" · "}© {new Date().getFullYear()} {profile.name}
         </p>
       </div>
     </footer>
