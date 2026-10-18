@@ -41,6 +41,20 @@ export function MailIcon(props: IconProps) {
   );
 }
 
+export function KofiIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3 8h14v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z" />
+      <path d="M17 9.5h1.5a2.5 2.5 0 0 1 0 5H17" />
+      <path
+        d="M10 15.5s-2.6-1.5-2.6-3.2a1.3 1.3 0 0 1 2.6-.5 1.3 1.3 0 0 1 2.6.5c0 1.7-2.6 3.2-2.6 3.2z"
+        fill="currentColor"
+        strokeWidth={1}
+      />
+    </svg>
+  );
+}
+
 export function SunIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
@@ -89,4 +103,5 @@ export const socialIcons = {
   github: GitHubIcon,
   linkedin: LinkedInIcon,
   mail: MailIcon,
+  kofi: KofiIcon,
 };

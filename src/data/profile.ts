@@ -1,8 +1,10 @@
 /** A link opens `href`; a copy button puts `copy` on the clipboard instead. */
 export type SocialLink = {
   label: string;
-  icon: "github" | "linkedin" | "mail";
+  icon: "github" | "linkedin" | "mail" | "kofi";
 } & ({ href: string; copy?: never } | { copy: string; href?: never });
+
+const kofi = "https://ko-fi.com/bvcrisostomo";
 
 export const profile = {
   name: "Brian Paul Crisostomo",
@@ -13,7 +15,7 @@ export const profile = {
   role: "Customer Success Engineer",
   currentCompany: "Gladly",
   currentCompanyUrl: "https://www.gladly.com",
-  kofi: "https://ko-fi.com/bvcrisostomo",
+  kofi,
   location: "Metro Manila, Philippines",
   headline: "Customer Success Engineer building tools that help support teams move faster.",
   /**
@@ -33,5 +35,6 @@ export const profile = {
     { label: "GitHub", href: "https://github.com/bvcrisostomo2", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/brian-crisostomo-653144185/", icon: "linkedin" },
     { label: "Email", copy: "bvcrisostomo2@gmail.com", icon: "mail" },
+    { label: "Ko-fi", href: kofi, icon: "kofi" },
   ] satisfies SocialLink[] as SocialLink[],
 };
