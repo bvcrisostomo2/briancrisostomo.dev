@@ -25,7 +25,7 @@ export function SocialLinks() {
           <li key={social.label}>
             <a
               href={social.href}
-              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+              {...(external ? { target: "_blank", rel: "noopener" } : {})}
               className={itemClass}
             >
               {icon}
